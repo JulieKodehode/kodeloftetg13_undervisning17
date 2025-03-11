@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <title>Hjem</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="headerLogo">JH</div>
+      <nav>
+        <ul class="navigation">
+          <a href="#unitConverter"> <li>Enhetkonventerer</li> </a>
+          <a href="#todoList"> <li>Gjøremålsliste</li> </a>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="unitConverter">
+        <!-- DEL 1: -->
+        <form action="" class="form">
+          <label for="unitInput">
+            Skriv inn en tall verdi
+            <input
+              type="number"
+              name="unitInput"
+              id="unitInput"
+              placeholder="Skriv inn en tall verdi"
+            />
+          </label>
+          <label for="unitFrom">
+            Velg konventering fra
+            <select name="unitFrom" id="unitFrom">
+              <option value="MM">MM</option>
+              <option value="CM">CM</option>
+              <option value="M">M</option>
+              <option value="KM">KM</option>
+            </select>
+          </label>
+
+          <label for="unitTo">
+            Velg konventering til
+            <select name="unitTo" id="unitTo">
+              <option value="MM">MM</option>
+              <option value="CM">CM</option>
+              <option value="M">M</option>
+              <option value="KM">KM</option>
+            </select>
+          </label>
+          <button type="button" id="convertButton">Konventer</button>
+          <p id="displayResult"></p>
+        </form>
+      </section>
+
+      <section id="todoList">
+        <!-- DEL 2: -->
+        <!-- 
+          Gjøremålsliste steg-for-steg:
+          1. Lag et semantisk skjema med relevante Form-elementer (eks. label og fyll egenskaper korrekt)
+          2. Lag en knapp som kan trykkes på for å sende data til JS
+            1. Knapp må ha ID
+            2. Lag variabel i JS
+            3. Hent ID-navn med document.querySelector-metoden
+          3. Hent verdien til input-element til JS
+            1. input må ha ID
+            2. Lag variabel i JS
+            3. Hent ID-navn med document.querySelector-metoden
+            4. Bruk .value-metoden for å få verdien til elementet
+        -->
+        <form>
+          <label for="userInput">
+            <input type="text" name="userInput" id="userInput" />
+          </label>
+
+          <!-- Steg 4 + -->
+
+          <button id="addTodo">Legg til</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Laget av Julie Hauge</p>
+    </footer>
+  </body>
+</html>
